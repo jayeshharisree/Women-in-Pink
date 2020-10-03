@@ -1,14 +1,9 @@
 from datetime import timedelta
 from flask import Flask, render_template
-import flask_monitoringdashboard as dashboard
 import requests_cache
 
 
-expire_after = timedelta(minutes=30)
-requests_cache.install_cache('main_cache',expire_after=expire_after)
-
 app = Flask(__name__)
-dashboard.bind(app)
 
 
 @app.template_filter()
