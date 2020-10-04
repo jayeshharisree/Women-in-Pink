@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="title" content="Corona">
+      <meta property="fb:app_id" content="312" />
+      <meta property="og:type" content="Woman in Pink" />
+      <meta property="og:url" content="https://womaninpink.herokuapp.com/" />
+      <meta property="og:title" content="Woman in Pink">
+      <meta property="og:image" content="https://womaninpink.herokuapp.com/static/assets/image/hp1.png">
+      <meta property="og:description" content="Woman in Pink">
+      <meta name="full-screen" content="yes">
+      <meta name="theme-color" content="#269bef ">
+      <!-- Responsive -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <title>Detection | Breast Cancer Awareness</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/css/bootstrap.min.css') }}">
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/css/style.css') }}">
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='assets/fonts/font/flaticon.css') }}">
+      <!---------favicon--------------->
+      <link rel="icon" type="image/png" href="{{ url_for('static',filename='assets/image/hp1.png') }}" sizes="32x32">
+      <link rel="icon" type="image/png" href="{{ url_for('static',filename='assets/image/hp1.png') }}" sizes="16x16">
+      <!---------favicon--------------->
+   </head>
+   <body class="home_page_one">
+      <div class="page_wapper">
+         <!--Start Preloader-->
+         <div class="preloader">
+            <div class="preloader_box">
+               <div class="loader">
+                  <img src="{{ url_for('static',filename='assets/image/loader/2.gif') }}">
+               </div>
+            </div>
+         </div>
+         <!--End Preloader -->
+         <!--Header-->
+         <header class="header_v2">
+            {% include 'main/header.html' %}
+         </header>
+         <!--Header-->
+         <!------main-content------>
+         <main class="main-content">
+            <section class="page_title">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-12 d-flex">
+                        <div class="content_box">
+                           <ul class="bread_crumb text-center">
+                              <li class="bread_crumb-item"><a href="#">Home</a></li>
+                              <li class="bread_crumb-item active"> Detect Breast Cancer</li>
+                           </ul>
+                           <h1>Detect Breast Cancer</h1>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <section class="about type_one">
+               <div class="container">
+                  <div class="row">
+                      <div class="col-lg-10 col-md-12 ">
+            <div class="contact_form_box type_one ">
+            <div class="form-group ">
+         <form action="{{ url_for('detection')}}"method="post">
+        <h1>Enter the value of tumor features >>></h1><br><br>
+
+    	<input type="text" name="mean_radius" placeholder="mean radius" required="required" /><br><br>
+        <input type="text" name="mean_texture" placeholder="mean texture" required="required" /><br><br>
+		<input type="text" name="mean_perimeter" placeholder="mean perimeter" required="required" /><br><br>
+		<input type="text" name="mean_area" placeholder="mean area" required="required" /><br><br>
+        <input type="text" name="mean_smoothness" placeholder="mean smoothness" required="required" /><br><br>
+		<input type="text" name="mean_compactness" placeholder="mean compactness" required="required" /><br>
+		<br>
+    	<input type="text" name="mean_concavity" placeholder="mean concavity" required="required" /><br><br>
+        <input type="text" name="mean_concave_points" placeholder="mean concave points" required="required" /><br><br>
+		<input type="text" name="mean_symmetry" placeholder="mean symmetry" required="required" /><br><br>
+    	<input type="text" name="mean_fractal_dimension" placeholder="mean fractal dimension" required="required" /><br><br>
+        <input type="text" name="radius_error" placeholder="radius error" required="required" /><br><br>
+		<input type="text" name="texture_error" placeholder="texture error" required="required" /><br>
+		<br>
+    	<input type="text" name="perimeter_error" placeholder="perimeter error" required="required" /><br><br>
+        <input type="text" name="area_error" placeholder="area error " required="required" /><br><br>
+		<input type="text" name="smoothness_error" placeholder="smoothness error" required="required" /><br><br>
+    	<input type="text" name="compactness_error" placeholder="compactness error" required="required" /><br><br>
+        <input type="text" name="concavity_error" placeholder="concavity error" required="required" /><br><br>
+		<input type="text" name="concave_points_error" placeholder="concave points error" required="required" /><br>
+    	<br>
+    	<input type="text" name="symmetry_error" placeholder="symmetry error" required="required" /><br><br>
+        <input type="text" name="fractal_dimension_error" placeholder="fractal dimension error" required="required" /><br><br>
+		<input type="text" name="worst_radius" placeholder="worst radius" required="required" /><br><br>
+    	<input type="text" name="worst_texture" placeholder="worst texture" required="required" /><br><br>
+        <input type="text" name="worst_perimeter" placeholder="worst perimeter" required="required" /><br><br>
+		<input type="text" name="worst_area" placeholder="worst area" required="required" /><br>
+		<br>
+    	<input type="text" name="worst_smoothness" placeholder="worst smoothness" required="required" /><br><br>
+        <input type="text" name="worst_compactness" placeholder="worst compactness" required="required" /><br><br>
+		<input type="text" name="worst_concavity" placeholder="worst concavity" required="required" /><br><br>
+    	<input type="text" name="worst_concave_points" placeholder="worst concave points" required="required" /><br><br>
+        <input type="text" name="worst_symmetry" placeholder="'worst symmetry" required="required" /><br><br>
+		<input type="text" name="worst_fractal_dimension" placeholder="worst fractal dimension" required="required" />
+        <br>
+        <br>
+
+        <!-- Show button -->
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Cancer</strong></button></a>
+
+         </form></div><br>
+   <h2>{{ prediction_text }}</h2>
+       </div></div></div>
+                  </div>
+            </section>
+
+
+
+            {% include 'main/footer.html' %}
+            <!-------------main-centent-end--------------->
+         </main>
+         <!-------------pagewapper-end--------------->
+      </div>
+      <!--Scroll to top-->
+      <a href="# " id="scroll" class="default-bg " style="display: inline;"><span class="fa fa-angle-up "></span></a>
+      <!---------mbile-navbar----->
+      <div class="bsnav-mobile ">
+         <div class="bsnav-mobile-overlay"></div>
+         <div class="navbar ">
+            <button class="navbar-toggler toggler-spring mobile-toggler"><span class="fa fa-close "></span></button>
+         </div>
+      </div>
+      <!---------mbile-navbar----->
+      <!-- /.side-menu__block -->
+      {% include 'main/sidebar.html' %}
+      <!-- /.side-menu__block -->
+      <!-- /.search-popup -->
+      <div class="search-popup">
+         <div class="search-popup__overlay custom-cursor__overlay">
+            <div class="cursor "></div>
+            <div class="cursor-follower "></div>
+         </div>
+         <!-- /.search-popup__overlay -->
+         <div class="search-popup__inner ">
+            <form action="# " class="search-popup__form ">
+               <input type="text" name="search" placeholder="Type here to Search.... ">
+               <button type="submit"><i class="flaticon-magnifying-glass "></i></button>
+            </form>
+         </div>
+         <!-- /.search-popup__inner -->
+      </div>
+      <!-- /.search-popup -->
+      <!-----------------------------------script-------------------------------------->
+      <script src="{{ url_for('static',filename='assets/js/jquery.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/bsnav.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/jquery-ui.js') }}"></script>
+
+      <script src="{{ url_for('static',filename='assets/js/owl.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/wow.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/jquery.fancybox.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/TweenMax.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/validator.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/appear.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/moment.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/jquery.flexslider-min.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/pagenav.js') }}"></script>
+      <script src="{{ url_for('static',filename='assets/js/custom.js') }}"></script>
+   </body>
+</html>

@@ -4,11 +4,11 @@
       <meta charset="utf-8">
       <meta name="title" content="Corona">
       <meta property="fb:app_id" content="312" />
-      <meta property="og:type" content="Corona" />
-      <meta property="og:url" content="http://steelthemes.com/demo/Elango/Corona-final" />
-      <meta property="og:title" content="Corona">
-      <meta property="og:image" content="http://steelthemes.com/demo/Elango/Corona-final/assets/image/fbimg-210x210.jpg">
-      <meta property="og:description" content="Corona is html 5 Template">
+      <meta property="og:type" content="Woman in Pink" />
+      <meta property="og:url" content="https://womaninpink.herokuapp.com/" />
+      <meta property="og:title" content="Woman in Pink">
+      <meta property="og:image" content="https://womaninpink.herokuapp.com/static/assets/image/hp1.png">
+      <meta property="og:description" content="Woman in Pink">
       <meta name="full-screen" content="yes">
       <meta name="theme-color" content="#269bef ">
       <!-- Responsive -->
@@ -29,9 +29,7 @@
          <div class="preloader">
             <div class="preloader_box">
                <div class="loader">
-                  <div class="circle item0"></div>
-                  <div class="circle item1"></div>
-                  <div class="circle item2"></div>
+                  <img src="{{ url_for('static',filename='assets/image/loader/2.gif') }}">
                </div>
             </div>
          </div>
@@ -109,6 +107,13 @@
                                        </li>
                                     </ul>
                                  </div>
+
+                                 <div class="form-group">
+                                    <div align="text-center">
+                                 <a href="/types" class="theme_btn tp_two">Types</a>
+                                    <a href="/stages" class="theme_btn tp_two">Stages</a>
+                                 </div>
+                                    </div>
                               </div>
                            </div>
                         </div>

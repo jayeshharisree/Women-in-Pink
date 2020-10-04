@@ -4,13 +4,13 @@
       <meta charset="utf-8">
       <meta name="title" content="Corona">
       <meta property="fb:app_id" content="312" />
-      <meta property="og:type" content="Corona" />
-      <meta property="og:url" content="http://steelthemes.com/demo/Elango/Corona-final" />
-      <meta property="og:title" content="Corona">
-      <meta property="og:image" content="http://steelthemes.com/demo/Elango/Corona-final/assets/image/fbimg-210x210.jpg">
-      <meta property="og:description" content="Corona is html 5 Template">
+      <meta property="og:type" content="Woman in Pink" />
+      <meta property="og:url" content="https://womaninpink.herokuapp.com/" />
+      <meta property="og:title" content="Woman in Pink">
+      <meta property="og:image" content="https://womaninpink.herokuapp.com/static/assets/image/hp1.png">
+      <meta property="og:description" content="Woman in Pink">
       <meta name="full-screen" content="yes">
-      <meta name="theme-color" content="#269bef">
+      <meta name="theme-color" content="#269bef ">
       <!-- Responsive -->
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -29,9 +29,7 @@
           <div class="preloader">
             <div class="preloader_box">
                <div class="loader">
-                  <div class="circle item0"></div>
-                  <div class="circle item1"></div>
-                  <div class="circle item2"></div>
+                  <img src="{{ url_for('static',filename='assets/image/loader/2.gif') }}">
                </div>
             </div>
          </div>
@@ -265,8 +263,9 @@
                      <div class="col-lg-12">
                         <div class="content_box text-center">
                            <h1> Age increase the risk of breast cancer </h1>
-                           <h4>The older we are, the more likely abnormal changes will occur in our cells. When many of these changes occur, cancer can develop.</h4>
-                        </div>
+                           <h4>The older we are, the more likely abnormal changes will occur in our cells. When many of these changes occur, cancer can develop.</h4><br><br>
+                        <a href="/detection" class="theme_btn tp_two"> Predict Breast Cancer </a>
+                           </div>
                      </div>
                   </div>
                </div>

@@ -379,7 +379,7 @@ Preloader
 }
 
 .preloader_box {
-	background-image: linear-gradient(to right, #187be7 0%, #269bef 50%, #36c2f9 100%);
+	background: #ffffff;
 	height: 100vh;
 	width: 100%;
 	position: relative;
